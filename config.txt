@@ -1,0 +1,3 @@
+git config --global user.name "Ana Julia Mattos"
+git config --global user.email anajuliamattos02@gmail.com
+
