@@ -1,3 +1,4 @@
 git config --global user.name "Ana Julia Mattos"
 git config --global user.email anajuliamattos02@gmail.com
 
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.8
