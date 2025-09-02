@@ -36,6 +36,9 @@ public class Pokemon
     [Required(ErrorMessage ="Informe o peso")]
     public double Peso { get; set; }
 
+[StringLength(200)]
+public string Imagem { get; set; }
+
     [StringLength(400)]
     public string Animacao {get;set;}    
 
