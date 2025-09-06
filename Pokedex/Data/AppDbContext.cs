@@ -1,4 +1,3 @@
-using System.Formats.Tar;
 using Microsoft.EntityFrameworkCore;
 using Pokedex.Models;
 
@@ -25,7 +24,7 @@ namespace Pokedex.Data;
             #region  Muitos para Muitos do Pokemon Tipo
                 //Configuração da Chave Primária
                 builder.Entity<PokemonTipo>().HasKey(
-                    pt => new { pt.PokemonNumero, pt.TiposId}
+                    pt => new { pt.PokemonNumero, pt.TipoId}
                 );
 
                 // Chave Etsrangeira - PokemonTipo -> Pokemon
@@ -38,7 +37,7 @@ namespace Pokedex.Data;
                   builder.Entity<PokemonTipo>().
                 HasOne(pt => pt.Tipo)
                 .WithMany(t => t.Pokemons)
-                .HasForeignKey(pt => pt.TiposId);
+                .HasForeignKey(pt => pt.TipoId);
             #endregion
         }
     }
