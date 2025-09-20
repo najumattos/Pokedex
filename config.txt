@@ -2,3 +2,5 @@ git config --global user.name "Ana Julia Mattos"
 git config --global user.email anajuliamattos02@gmail.com
 
 dotnet add package Microsoft.EntityFrameworkCore --version 9.0.8
+
+dotnet aspnet-codegenerator controller -name RegioesController --model Regiao  --dataContext AppDbContext --layout "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers  
