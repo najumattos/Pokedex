@@ -6,15 +6,16 @@ namespace Pokedex.Models;
 public class Pokemon
 {
     [Key]
+    [Display(Name = "Número", Prompt="Informe o Número")]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public uint Numero { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe a Região")]
+    [Display(Name = "Região", Prompt="Informe a Região")]
     public uint RegiaoId { get; set; }
     [ForeignKey("RegiaoId")]
     public Regiao Regiao { get; set; }
 
-    [Required(ErrorMessage = "Por favor, informe o Genêro")]
     public uint GeneroId { get; set; }
     [ForeignKey("GeneroId")]
     public Genero Genero { get; set; }

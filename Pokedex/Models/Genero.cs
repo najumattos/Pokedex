@@ -9,7 +9,8 @@ namespace Pokedex.Models;
         [Key]
         public uint Id { get; set; }
         
-        [Required(ErrorMessage = "Informe o nome")]
+        [Display(Name = "Gênero", Prompt="Informe o Gênero")]
+        [Required(ErrorMessage = "Informe o Gênero")]
         [StringLength(30)]
         public string Nome { get; set; }
     }

@@ -10,7 +10,8 @@ namespace Pokedex.Models;
         [Key]
         public uint Id { get; set; }
         
-        [Required(ErrorMessage = "Informe o nome")]
+        [Display(Name = "Região", Prompt="Informe a Região")]
+        [Required(ErrorMessage = "Informe a Região")]
         [StringLength(30)]
         public string Nome { get; set; }
     }
