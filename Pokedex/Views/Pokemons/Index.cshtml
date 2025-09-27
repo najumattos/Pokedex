@@ -14,7 +14,7 @@
         <i class="bi bi-plus-circle"></i> Adicionar
     </a>
 </p>
-<table class="table">
+<table class="table table-striped" id="table">
     <thead>
         <tr>
             <th>
@@ -66,3 +66,14 @@
 }
     </tbody>
 </table>
+
+@section Styles {
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+}
+@section Scripts{    
+    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <script>
+        let table = new DataTable('#table');
+
+    </script>
+}
