@@ -61,7 +61,7 @@
         </div>
         <div class="mb-3">
          <label for="SelectTypes" class="form-label">Tipos</label>
-            <select class="form-select" id="SelectTypes" name="SelectTypes"
+            <select class="selectpicker" data-live-search="true" id="SelectTypes" name="SelectTypes"
                 size="18" multiple asp-items="ViewBag.Tipos"></select>
         </div>
 
@@ -82,6 +82,11 @@
     <!-- para validar dados >-->
     <partial name="_ValidationScriptsPartial"/>
     <script>
+$(document).ready(function() {
+       
+        $('.selectpicker').selectpicker();
+    });
+
      window.addEventListener('load', function(){
         document.querySelector('input[type=file]').addEventListener('change', function(){
             if(this.files && this.files[0]){ 
