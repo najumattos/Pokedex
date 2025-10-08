@@ -91,10 +91,10 @@ namespace Pokedex.Controllers
                       pokemon.Tipos = new List<PokemonTipo>();
                 foreach (var tipo in SelectTypes)
                 {
+                    
                     pokemon.Tipos.Add(
                         new PokemonTipo
-                        {
-                            PokemonNumero = pokemon.Numero,
+                        {                          
                             TipoId = uint.Parse(tipo)
                         }
                     );
